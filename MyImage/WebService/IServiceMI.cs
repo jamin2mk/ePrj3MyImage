@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using MIClient.Models;
 
 namespace WebService
 {
@@ -12,7 +13,8 @@ namespace WebService
     [ServiceContract]
     public interface IServiceMI
     {
-
+        [OperationContract]
+        bool Create(tb_customer cust);
     }
 
 
